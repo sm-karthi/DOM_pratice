@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Elements</title>
+</head>
+<body>
+    <div class="info">Info 1</div>
+    <div class="info">Info 2</div>
+    <div class="info">Info 3</div>
+    <button id="toggleButton">Show/Hide Info</button>
+    <script>
+        document.getElementById("toggleButton").onclick = function() {
+    let elements = document.getElementsByClassName("info");
+    for (let i = 0; i < elements.length; i++) {
+        if (elements[i].style.display === "none") {
+            elements[i].style.display = "block";
+        } else {
+            elements[i].style.display = "none";
+        }
+    }
+};
+    </script>
+</body>
+</html>
